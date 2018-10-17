@@ -40,9 +40,7 @@ module.exports = {
   ],
 
   router: {
-    middleware: [
-      'vue-kindergarten'
-    ]
+    middleware: 'vue-kindergarten'
   },
 
   /*

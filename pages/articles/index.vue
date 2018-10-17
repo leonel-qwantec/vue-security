@@ -19,7 +19,11 @@
 </template>
 
 <script>
+  import articlesPerimeter from '~/perimeters/articlesPerimeter'
+
   export default {
+    routePerimeter: articlesPerimeter,
+    routePerimeterAction: 'read',
     data () {
       return {
         articles: [

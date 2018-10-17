@@ -61,7 +61,6 @@ export default {
   },
   mounted() {
     this.role = this.user.info.role
-    console.log(this.user)
   },
   methods: {
     ...mapMutations([

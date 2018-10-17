@@ -1,16 +1,17 @@
 import { createPerimeter } from 'vue-kindergarten';
 
-createPerimeter({
+const perimeter = new createPerimeter({
   purpose: 'article',
 
   can: {
     read: () => true,
 
     // only admin or moderator can update articles
-    update: article => this.isAdmin() || (this.isCreator(article) && this.isModerator()),
+    //update: article => this.isAdmin() || (this.isCreator(article) && this.isModerator()),
+    update: article => perimeter.isAdmin() || (perimeter.isCreator(article) && perimeter.isModerator()),
 
     // if user can update articles then she can also destroy them
-    destroy: article => this.isAllowed('update', article)
+    destroy: article => perimeter.isAllowed('update', article)
   },
 
   secretNotes(article) {
@@ -34,4 +35,6 @@ createPerimeter({
   expose: [
     'secretNotes'
   ]
-});
+})
+
+export default perimeter
