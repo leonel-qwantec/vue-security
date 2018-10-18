@@ -59,6 +59,11 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VeeValidate from 'vee-validate'
+
+  Vue.use(VeeValidate)
+
   export default {
     data() {
       return {
@@ -67,7 +72,10 @@
         fixed: false,
         items: [
           { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Articles', to: '/articles' }
+          { icon: 'bubble_chart', title: 'Articles', to: '/articles' },
+          { icon: 'bubble_chart', title: 'Profile', to: '/profile' },
+          { icon: 'bubble_chart', title: 'Register', to: '/register' },
+          { icon: 'bubble_chart', title: 'Login', to: '/login' }
         ],
         miniVariant: false,
         right: true,
